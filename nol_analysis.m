@@ -41,7 +41,7 @@ rsxn_pts=addvars(rsxn_pts,rsxn_pt_has_def,'NewVariableNames','has_deficit');
 [tbl_eval,chi2stat_eval,pval_eval]=crosstab([rsxn_pts.qabEval(rsxn_pts.has_deficit==true);rsxn_pts.qabEval(~rsxn_pts.has_deficit)],[zeros(sum(rsxn_pts.has_deficit),1);ones(sum(~rsxn_pts.has_deficit),1)]);
 
 allPs=[];
-varsToTest=[find(strcmp(rsxn_pts.Properties.VariableNames,'lesSize')), find(strcmp(rsxn_pts.Properties.VariableNames,'age')),find(strcmp(rsxn_pts.Properties.VariableNames,'daysPost')), find(endsWith(rsxn_pts.Properties.VariableNames,'_L'))];
+varsToTest=[find(strcmp(rsxn_pts.Properties.VariableNames,'les_size')), find(strcmp(rsxn_pts.Properties.VariableNames,'age')),find(strcmp(rsxn_pts.Properties.VariableNames,'daysPost')), find(endsWith(rsxn_pts.Properties.VariableNames,'_L'))];
 for i=varsToTest
     [p,h,stats]=ranksum(rsxn_pts{rsxn_pts.has_deficit==true,rsxn_pts.Properties.VariableNames{i}},rsxn_pts{rsxn_pts.has_deficit==false,rsxn_pts.Properties.VariableNames{i}});
     fprintf('%s - U %0.3f, p %0.4f\n',rsxn_pts.Properties.VariableNames{i},stats.ranksum,p)
