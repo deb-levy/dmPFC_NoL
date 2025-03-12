@@ -7,7 +7,7 @@ This code accompanies Levy et al., 2025, "Role for left dorsomedial prefrontal c
 | ------------- | ------------- |
 | nol_analysis.m  | The main analysis code.  |
 
-## Data tables available upon reasonable request
+## Data files available upon reasonable request
 
 | Filename  | Description |
 | ------------- | ------------- |
